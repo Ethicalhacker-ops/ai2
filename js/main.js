@@ -121,6 +121,16 @@
             }
         }
     });
+
+    // Live clock
+    function updateDateTime() {
+        const now = new Date();
+        const dateTimeString = now.toLocaleString();
+        $('#datetime').text(dateTimeString);
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
     
 })(jQuery);
 
